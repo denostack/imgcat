@@ -12,7 +12,7 @@ await printImage(await Deno.readFile("./deno512.png"));
 
 And run with `deno run -A test.ts`.
 
-![image](https://user-images.githubusercontent.com/4086535/132719987-72a5ad7a-2317-473d-8447-814ff2d2d7c5.png)
+![example1](https://user-images.githubusercontent.com/4086535/132720680-202d2840-af68-4df1-ab06-f0675b41afd4.png)
 
 Alo, You can use it with [deno-canvas](https://deno.land/x/canvas@v1.3.0).
 
@@ -29,3 +29,5 @@ ctx.fillRect(10, 10, 200 - 20, 200 - 20);
 
 await printImage(canvas.toBuffer());
 ```
+
+![example2](https://user-images.githubusercontent.com/4086535/132720734-e9094cce-55ad-4177-98b8-6af2c87978cb.png)
