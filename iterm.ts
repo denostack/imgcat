@@ -22,6 +22,12 @@ export function image(
   if (options.noPreserveAspectRatio) {
     body += ";preserveAspectRatio=0";
   }
-  body += `:${btoa(String.fromCharCode(...buffer))}${BEL}`;
+
+  let binary = "";
+  const len = buffer.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(buffer[i]);
+  }
+  body += `:${btoa(binary)}${BEL}`;
   return body;
 }
